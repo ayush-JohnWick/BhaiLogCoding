@@ -5,6 +5,9 @@ import java.util.List;
 
 public class StringLargestTwoDigitFragment {
 
+    /**
+     * This function using String.length()
+     */
     public void LargestStringFragment() {
         String s = "50552";
         List<Integer> intList = new ArrayList<>();
@@ -21,5 +24,41 @@ public class StringLargestTwoDigitFragment {
             }
         }
         System.out.println("Largest Fragment is " + largestFragment);
+    }
+
+    /**
+     * THis approach using convert string into character Array
+     *
+     */
+
+    public void FindLargestStringFragment()
+    {
+        String input="50552";
+        char[] ar= input.toCharArray();
+        List<Integer> ar1= new ArrayList();
+        for(int i=0;i<ar.length;i++)
+        {
+            if(i!=ar.length-1)
+            {
+                StringBuilder bs=new StringBuilder();
+                bs.append(ar[i]);
+                bs.append(ar[i+1]);
+                ar1.add(Integer.parseInt(bs.toString()));
+            }
+        }
+
+        int biggestFragment=Integer.MIN_VALUE;
+        for(Integer arr:ar1)
+        {
+            if(arr>biggestFragment)
+            {
+                biggestFragment=arr;
+
+            }
+        }
+
+        System.out.println(biggestFragment);
+
+
     }
 }
