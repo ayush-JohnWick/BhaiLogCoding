@@ -24,4 +24,22 @@ public class CoutConsecutiveChar {
                     + "" + count + "");
         }
     }
+    public void ConsecutiveCharUsingMap(){
+        String str = "ccccOddEEEccC";
+        Map<Character, Integer> map = new LinkedHashMap<>();
+        String res = "";
+        map.put(str.charAt(0), 1);
+        char key = str.charAt(0);
+        for (int i = 1; i < str.length(); i++) {
+            if (map.containsKey(str.charAt(i)))
+                map.put(str.charAt(i), map.get(str.charAt(i)) + 1);
+            else {
+                res += Character.toString(key) + map.get(key);
+                map.put(str.charAt(i), 1);
+                key = str.charAt(i);
+            }
+        }
+        res += Character.toString(key) + map.get(key);
+        System.out.println(res);
+    }
 }
