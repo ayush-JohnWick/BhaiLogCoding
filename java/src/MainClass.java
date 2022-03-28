@@ -14,7 +14,8 @@ public class MainClass {
         StringFormatA_B formatString= new StringFormatA_B();
         formatString.ReplecateA_B();*/
         CoutConsecutiveChar cs = new CoutConsecutiveChar();
-        cs.ConsecutiveChar();
+       // cs.ConsecutiveChar();
+        cs.ConsecutiveCharUsingMap();
 
     }
 }
