@@ -7,7 +7,7 @@ number of character count and formatted string needs to be deleted to achieve fo
 public class StringFormatA_B {
     public void ReplecateA_B() {
         StringBuilder sb = new StringBuilder();
-        String s = "AAABAB";
+        String s = "AABAB";
         sb.append(s);
         int count = 0;
         for (int i = 0; i < s.length(); i++) {
