@@ -1,5 +1,8 @@
 import StringProblemSolving.*;
 
+import java.util.Arrays;
+import java.util.stream.Stream;
+
 public class MainClass {
     public static void main(String[] args) {
         ReverseAndSwap rs = new ReverseAndSwap();
